@@ -1,0 +1,9 @@
+{% extends "::appLayout.html.twig"  %}
+{% block brand %} <a class="brand" href="#">RECUPERATION MOT DE PASSE </a> {% endblock %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block table %}
+<p>
+{{ 'resetting.check_email'|trans({'%email%': email}) }}
+</p>
+{% endblock %}

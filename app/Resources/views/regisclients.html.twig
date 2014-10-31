@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+    <title>{% block title %}Enregistrement Utilisateur{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/comexparcomex/css/bootstrap.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('bundles/comexparcomex/css/bootstrap-responsive.css') }}" type="text/css" media="all" />
+{% endblock %}
+</head>
+<body>
+
+     
+<div class="container">
+ <div id="tete">
+    {% block tete %}
+        
+    {% endblock %}
+</div>
+
+<div class="row">
+        <div  id="corps">
+            {% block fos_user_content %}
+                
+            {% endblock %}
+
+        </div>
+</div>
+</div>
+<div class="navbar-fixed-bottom ">
+
+    {% block pied_page %}
+    <p class="pull-right">Copyright &copy;2012 Realisé par: A.H.</p>
+    {% endblock %}
+</div>
+</div>
+</body>
+</html>

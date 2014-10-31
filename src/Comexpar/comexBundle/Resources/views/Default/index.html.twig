@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bienvenue à COMEXIS SARL</title>
+{% block stylesheets %}
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% endblock %}   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#myCarousel').on('slid.bs.carousel', function () {
+		
+	});
+});
+</script>
+<style type="text/css">
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.ccc{
+    background-color: rgba(0, 0, 0, 0.1);       
+}
+.item{
+    background: #333;    
+    text-align: center;
+    height: 500px !important;
+}
+.item-image0{
+    background-image: url({{ asset('bundles/comexparcomex/images/beach1.jpg') }});
+    border: solid 10px;    
+    
+}
+.item-image1{
+    background-image: url({{ asset('bundles/comexparcomex/images/transfert1.jpg') }});    
+    
+}
+.item-image2{
+    background-image: url({{ asset('bundles/comexparcomex/images/logo.png') }});    
+    
+}
+.item-image3{
+    background-image: url({{ asset('bundles/comexparcomex/images/papier-peint.jpg') }});    
+    
+}
+.carousel{
+    margin-top: 20px;
+}
+.bs-example{
+	margin: 20px;
+}
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
+    	<!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>   
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item item-image0">
+                <h2></h2>
+         		<div class="carousel-caption ccc">
+                  <h3>Godomey</h3>
+                  <p>Situé en pleine ville, notre agence....</p>
+                </div>
+            </div>
+            <div class="item item-image1">
+                <h2></h2>
+                <div class="carousel-caption ccc">
+                  <h3>Maromilitaire</h3>
+                  <p>Située au bord de la voie et en face de Toxi Labo....</p>
+                </div>
+            </div>
+            <div class="item item-image2">
+                <h2></h2>
+                <div class="carousel-caption ccc">
+                  <h3>Notre logo</h3>
+                  <p>Le carré de la construction...</p>
+                </div>
+            </div>
+            <div class="item item-image3">
+                <h2></h2>
+                <div class="carousel-caption ccc">
+                  <h3>Abomey Calavi</h3>
+                  <p>Bien située dans Abomey Calavi....</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">COMEXIS SARL</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Acceuil</a></li>
+              <li><a href="#">Activités</a></li>
+              <li><a href="#">Projets</a></li>
+              <li><a href="#">Nous contacter</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li ><a href="{{ path('fos_user_security_login') }}">Clients</a></li>
+              <li><a href="{{ path('fos_user_security_login') }}">Membres</a></li>
+              <li><a href="{{ path('fos_user_security_login') }}">Partenaires</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </div>
+</body>
+</html>

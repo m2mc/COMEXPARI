@@ -1,0 +1,11 @@
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^comexis-sarl.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.comexis-sarl.com$
+RewriteCond %{REQUEST_URI} !web/
+RewriteRule (.*) /web/$1 [L]
+</IfModule>

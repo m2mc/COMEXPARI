@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    
+    <services>
+        <service id="comexpar_user.registration.form.type" class="Comexpar\UserBundle\Form\Type\RegistrationFormType">
+            <tag name="form.type" alias="comexpar_user_registration" />
+            <argument>%fos_user.model.user.class%</argument>
+        </service>
+        <!--
+        <service id="comexpar_user.example" class="Comexpar\UserBundle\Example">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+        </service>
+    -->
+    </services>
+
+</container>

@@ -1,0 +1,12 @@
+comexpar_user:
+    resource: "@ComexparUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+comexparcomex:
+    resource: "@ComexparcomexBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
